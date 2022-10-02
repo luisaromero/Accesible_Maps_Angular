@@ -8,7 +8,34 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
-  
+ :host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    background-color: var(--header-color);
+    padding: 2em;
+}
+header .title {
+    font-size: 28px;
+}
+main {
+    display: flex;
+    flex-grow: 1;
+}
+.left-bar {
+    width: 20em;
+    background-color: var(--sidebar-color);
+}
+.map-container {
+    flex-grow: 1;
+}
+footer {
+    background-color: var(--header-color);
+    padding: 1em;
+}
+
 </style>
 
 <!-- Toolbar -->
@@ -17,6 +44,14 @@
   
   <button class="btn btn-danger" >Welcome</button>
 </div>
+<header>
+  <div class="title">Map Viewer - Openlayers & Angular</div>
+</header>
+<main>
+  <div class="left-bar"></div>
+  <div id="ol-map" class="map-container"></div>
+</main>
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
